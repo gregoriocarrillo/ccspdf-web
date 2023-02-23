@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Styling */
+:root {
+  --main-color: #005952;
+  --secondary-color: #f0540a;
+}
+
+body {
+  /*font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: "Saira", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1em;
+}
+
+li,
+a,
+button {
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+header {
+  /* background: var(--main-color); */
+  max-width: 1400px;
+  display: flex;
+  margin: auto;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 10px;
+  /* border: 1px solid orange; */
+}
+
+.navbar {
+  overflow: auto;
+}
+
+.logo {
+  cursor: pointer;
+  width: 150px;
+  margin-right: auto;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: var(--secondary-color);
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
+.btn-gr {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: var(--main-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-gr:hover {
+  background-color: var(--secondary-color);
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  background: var(--main-color);
+
+}
+
+.main-wrapper {
+  width: 50%;
+  
+}
+
+.main-img {
+  width: 50%;
+  height: 800px;
+  background-image: linear-gradient(rgba(0, 89, 82, 0.35), rgba(0, 89, 82, 0.35)), url("/img/CC2.jpg");
+  background-position: center center;
+  background-size: auto;
+}
+
+.main-text {
+  padding: 0 50px;
+  color: #fff;
+}
+
+.main-text > h1 {
+  font-size: 4em;
+  line-height: 1.2em;
+}
+
+.btn-org {
+  /* margin-left: 20px; */
+  padding: 9px 30px;
+  background-color: var(--secondary-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease 0s;
+}
