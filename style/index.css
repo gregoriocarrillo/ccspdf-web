@@ -43,23 +43,18 @@ p {
 }
 
 /* HEADER */
+
 header {
-  max-width: 1400px;
   display: flex;
-  margin: auto;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
 }
 
-.navbar {
-  overflow: auto;
-}
-
 .logo {
   cursor: pointer;
-  width: 150px;
-  margin-right: auto;
+  width: 200px;
+  margin-left: 20px;
 }
 
 .nav-links li {
@@ -79,8 +74,8 @@ header {
   color: var(--secondary-color);
 }
 
-.btn-gr {
-  margin-left: 20px;
+.btn-contact {
+  margin-right: 20px;
   padding: 9px 25px;
   background-color: var(--main-color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -91,19 +86,16 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-.btn-gr:hover {
+.btn-contact:hover {
   background-color: var(--secondary-color);
 }
 
 /* HERO SECTION */
 .main-container {
-  display: flex;
+  display: grid;
   align-items: center;
   background: var(--main-color);
-}
-
-.main-wrapper {
-  width: 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Titulo principal */
@@ -136,11 +128,10 @@ header {
 
 /* Imagen principal */
 .main-img {
-  width: 50%;
   height: 650px;
   background-image: linear-gradient(rgba(0, 89, 82, 0.35), rgba(0, 89, 82, 0.35)), url("/img/img-main.jpg");
   background-position: center center;
-  background-size: auto;
+  background-size: cover;
 }
 
 /* CATEGORIAS */
