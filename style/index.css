@@ -12,6 +12,8 @@
 :root {
   --main-color: #005952;
   --secondary-color: #f0540a;
+  --ff-main: "Saira", Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -19,7 +21,7 @@ html {
 }
 
 body {
-  font-family: "Saira", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-main);
   line-height: 1em;
 }
 
@@ -57,16 +59,17 @@ header {
   margin-left: 20px;
 }
 
-.nav-links li {
+.navbar {
   display: inline-block;
   padding: 0px 20px;
 }
 
-.nav-links li a {
+.navbar a {
+  padding: 0 10px;
   transition: all 0.3s ease 0s;
 }
 
-.nav-links li a:hover {
+.navbar a:hover {
   color: var(--secondary-color);
 }
 
@@ -74,20 +77,10 @@ header {
   color: var(--secondary-color);
 }
 
-.btn-contact {
-  margin-right: 20px;
-  padding: 9px 25px;
-  background-color: var(--main-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  transition: all 0.3s ease 0s;
-}
-
-.btn-contact:hover {
-  background-color: var(--secondary-color);
+#menu-icon {
+  font-size: 2rem;
+  color: #333;
+  display: none;
 }
 
 /* HERO SECTION */
@@ -109,10 +102,10 @@ header {
   line-height: 1.2em;
 }
 
-.btn-org {
+.btn-main {
   padding: 9px 30px;
   background-color: var(--secondary-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-secondary);
   font-size: 1em;
   color: #fff;
   cursor: pointer;
@@ -121,7 +114,7 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-.btn-org:hover {
+.btn-main:hover {
   background-color: #f7f6f1;
   color: var(--secondary-color);
 }
@@ -159,7 +152,6 @@ header {
 
 .category-box {
   width: 450px;
-  /* height: auto; */
   padding: 30px;
   text-align: center;
 }
@@ -172,7 +164,41 @@ header {
 .category-box img {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 4px 4px 12px #333;
+  border: 3px solid var(--main-color);
+  transition: 0.5s ease;
+}
+
+.category-box img:hover {
+  transform: scale(1.03);
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 85%;
+  } 
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: #dcdcdc;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
 }
 
 /* .box-test {
